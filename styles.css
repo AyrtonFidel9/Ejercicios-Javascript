@@ -13,7 +13,7 @@ header{
     height: 28em;
     /* background: rgb(255,234,38);
     background: linear-gradient(270deg, rgba(255,234,38,1) 0%, rgba(255,238,80,1) 48%, rgba(246,231,83,1) 100%); */
-    background-image: url("/App-Javascript/Img/BannerJavascript.png");
+    background-image: url("/Img/BannerJavascript.png");
     display: flex;
     flex-direction: column;
     align-items: center;
