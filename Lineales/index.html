@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../vendor/fontawesome-free-5.15.1-web/css/all.min.css">
+    <title>Lineales</title>
+</head>
+<body class="flex">
+    <nav id="menu" class="desplegar">
+        <div id="ham">
+            <input type="checkbox" id="act">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+        </div>
+        <div>
+            <ul id="ops" class="hidden">
+                <a href="/App-Javascript/index.html" style="text-decoration: none; color: black;">
+                    <li class="desplegar">Regresar</li>
+                </a>
+                <li class="desplegar" id="btnEjUno"><a href="#">Ejercicio 1 - Incidencia Sol</a></li>
+                <li class="desplegar" id="btnEjDos"><a href="#">Ejercicio 2 - Altura</a></li>
+                <li class="desplegar" id="btnEjTres"><a href="#">Ejercicio 3 - Cinco Cifras</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="flex" id="cuerpo">
+        <header>
+            <div id="titulo">
+                <strong>
+                    <h1>Ejercicios en JS - Lineales</h1></strong>
+            </div>  
+        </header>
+        <main class="flex">
+            <div id="enunciadoUno">
+                <div id="ejercicioUno">
+                    <div class="encabezadoEnun">
+                        <h3>
+                            Ejercicio 1
+                        </h3>
+                    </div>
+                    <div class="enunciadoEnun">
+                        <p>Conocida la altura(h) de un poste y el largo de la sombra de este proyectada sobre la acera(s),a una hora determinada del día, haga un programa que calcule e imprima (grados, minutos y segundos), el ángulo de incidencia del sol en ese momento.</p>
+                    </div>
+                </div>
+                <div class="grid">
+                    <form>
+                        <label>Ingrese la altura del poste</label>
+                        <div class="input-group flex-nowrap textbox">
+                            <input id="altPoste" class="form-control" required>
+                            <span class="input-group-text" id="addon-wrapping">M</span>
+                        </div>
+                        <label>Ingrese el largo de la sombra</label>
+                        <div class="input-group flex-nowrap textbox">
+                            <input id="altSombra" class="form-control" required>
+                            <span class="input-group-text" id="addon-wrapping">M</span>
+                        </div>
+                        <label>Hora del Día</label>
+                        <div class="textbox">
+                            <select id="cmbHora" class="form-select" aria-label="Default select example">
+                                <option selected>Elegir hora del día</option>
+                                <option value="6">6:00 am</option>
+                                <option value="7">7:00 am</option>
+                                <option value="8">8:00 am</option>
+                                <option value="9">9:00 am</option>
+                                <option value="10">10:00 am</option>
+                                <option value="11">11:00 am</option>
+                                <option value="12">12:00 am</option>
+                                <option value="13">13:00 pm</option>
+                                <option value="14">14:00 pm</option>
+                                <option value="15">15:00 pm</option>
+                                <option value="16">16:00 pm</option>
+                                <option value="17">17:00 pm</option>
+                                <option value="18">18:00 pm</option>
+                                <option value="19">19:00 pm</option>
+                            </select>
+                        </div>
+                    </form>
+                    <div>
+                        <label><strong>Latitud: </strong>
+                        <label id="respuesta1">---</label>
+                        <br>
+                        <label><strong>Ángulo Incidencia: </strong></label>
+                        <label id="resAngulo"></label>
+                    </div>
+                </div>
+                <div id="pnlBotones">
+                    <center>
+                        <button id="btnLimpiar1" type="button" class="btn btn-light boton">Limpiar</button>
+                        <button id="btnCalcular1" type="button" class="btn btn-light boton">Calcular</button>
+                    </center>
+                </div>
+            </div>  
+            <div id="enunciadoDos" class="hidden" style="height: 23em;">
+                <div id="ejercicioDos">
+                    <div class="encabezadoEnun">
+                        <h3>
+                            Ejercicio 2
+                        </h3>
+                    </div>
+                    <div class="enunciadoEnun">
+                        <p>Confeccione un programa para determinar desde que altura se dejó caer un cuerpo, si se sabe que este estuvo en el aire t segundos.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid">
+                    <form>
+                        <label>Ingrese el tiempo que el cuerpo estuvo en el aire</label>
+                        <div class="input-group flex-nowrap textbox">
+                            <input id="txtTiempo" class="form-control" required>
+                            <span class="input-group-text" id="addon-wrapping">Seg</span>
+                        </div>
+                    </form>
+                    <div>
+                        <label><strong>Altura: </strong>
+                        <label id="respuestaAlt">---</label>
+                    </div>
+                </div>
+                <div id="pnlBotones">
+                    <center>
+                        <button id="btnLimpiar2" type="button" class="btn btn-light boton">Limpiar</button>
+                        <button id="btnCalcular2" type="button" class="btn btn-light boton">Calcular</button>
+                    </center>
+                </div>
+            </div>
+            <div id="enunciadoTres" class="hidden" style="height: 35em;">
+                <div id="ejercicioTres">
+                    <div class="encabezadoEnun">
+                        <h3>
+                            Ejercicio 3
+                        </h3>
+                    </div>
+                    <div class="enunciadoEnun">
+                        <p>Dados 5 números de 5 cifras encontrar el 6 número de 5 cifras de la forma siguiente:
+                            <strong>9</strong>4567;
+                            2<strong>8</strong>954;
+                            36<strong>5</strong>32;
+                            456<strong>6</strong>8;
+                            6578<strong>8</strong>
+                            <br>
+                            Número de 5 cifras:<strong>98568</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="grid">
+                    <form>
+                        <label>Ingrese 5 números de 5 cifras</label>
+                        <div class="input-group flex-nowrap textbox">
+                            <input id="txtNum1" class="form-control" required placeholder="Número 1">
+                        </div>
+                        <div class="input-group flex-nowrap textbox">
+                            <input id="txtNum2" class="form-control" required placeholder="Número 2">
+                        </div>
+                        <div class="input-group flex-nowrap textbox">
+                            <input id="txtNum3" class="form-control" required placeholder="Número 3">
+                        </div>
+                        <div class="input-group flex-nowrap textbox">
+                            <input id="txtNum4" class="form-control" required placeholder="Número 4">
+                        </div>
+                        <div class="input-group flex-nowrap textbox">
+                            <input id="txtNum5" class="form-control" required placeholder="Número 5">
+                        </div>
+                    </form>
+                    <div>
+                        <label><strong>Número Generado: </strong>
+                        <label id="respNum">---</label>
+                    </div>
+                </div>
+                <div id="pnlBotones">
+                    <center>
+                        <button id="btnLimpiar3" type="button" class="btn btn-light boton">Limpiar</button>
+                        <button id="btnCalcular3" type="button" class="btn btn-light boton">Calcular</button>
+                    </center>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="main.js" type="text/javascript"></script>
+</html>
